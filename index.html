@@ -46,13 +46,9 @@
 
     <!-- 使用 gps-entity-place 指定經緯度(與海拔)來放置3D物件 -->
     <a-entity
-      gps-entity-place="
-        latitude: 23.129949;  <!-- 改成你家院子緯度 -->
-        longitude: 121.230071; <!-- 改成你家院子經度 -->
-        altitude: 30;        <!-- 若知道海拔高度(公尺),可填; 若不要,可省略此欄 -->
-      "
-      gltf-model="url(./axe.glb)"  <!-- 斧頭模型的路徑, 以相對於index.html的路徑表示 -->
-      scale="500 500 500"          <!-- 放大500倍 => 約 500 公尺高(視你的原始模型而定) -->
+      gps-entity-place="latitude: 23.129949; longitude: 121.230071; altitude: 30;"
+      gltf-model="url(./axe.glb)"
+      scale="500 500 500"
       rotation="0 0 0"
     >
     </a-entity>

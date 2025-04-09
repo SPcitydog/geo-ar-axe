@@ -28,7 +28,7 @@
 
 <body>
   <div id="textOverlay">
-    <strong>Geo AR Demo:</strong> 003_John
+    <strong>Geo AR Demo:</strong> 004_John
   </div>
 
   <a-scene
@@ -47,22 +47,11 @@
     <!-- 在同一個經緯度位置 放置斧頭 -->
     <a-entity
       gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      gltf-model="url(./AXE.glb)"
-      scale="50 50 50"
+      gltf-model="url(https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models/2.0/Duck/glTF-Binary/Duck.glb)"
+      scale="10 10 10"
       rotation="0 0 0"
     >
     </a-entity>
-
-    <!-- 在同一個經緯度位置 放置一個紅色方塊 -->
-    <a-entity
-      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      geometry="primitive: box;"
-      material="color: red;"
-      position="0 0 0"
-      scale="5 5 5"
-    >
-    </a-entity>
-
   </a-scene>
 </body>
 </html>

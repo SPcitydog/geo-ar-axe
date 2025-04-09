@@ -2,33 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Camera Test</title>
+  <title>Step 2 - Camera Test</title>
 </head>
-<body>
+<body style="margin:0; padding:0; overflow:hidden;">
   <h1>Camera Test</h1>
-  <p>如果成功，應該會顯示後置相機的即時影像。</p>
-  <video id="video" autoplay playsinline style="width: 100%; max-width: 600px; background: #000;"></video>
+  <p>若成功，會顯示後置相機的即時影像。</p>
+  <video id="video" autoplay playsinline style="width:100%; max-width:600px; background:#000;"></video>
 
   <script>
-    // 檢查瀏覽器是否支援 getUserMedia
+    // 嘗試取得後置相機鏡頭
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      // 嘗試呼叫後置相機 (environment)
       navigator.mediaDevices.getUserMedia({
-        video: {
-          facingMode: { ideal: "environment" }  // 尝试後置鏡頭
-        },
+        video: { facingMode: { ideal: 'environment' } },
         audio: false
       })
-      .then(function(stream) {
-        const videoEl = document.getElementById("video");
+      .then(stream => {
+        const videoEl = document.getElementById('video');
         videoEl.srcObject = stream;
       })
-      .catch(function(err) {
-        console.error("Camera access error:", err);
-        document.body.insertAdjacentHTML("beforeend", `<p style="color:red;">無法啟動相機：${err.message}</p>`);
+      .catch(err => {
+        document.body.insertAdjacentHTML('beforeend', `<p style="color:red;">無法啟動相機：${err.message}</p>`);
+        console.error('Camera access error:', err);
       });
     } else {
-      document.body.insertAdjacentHTML("beforeend", `<p style="color:red;">此瀏覽器不支援 getUserMedia。</p>`);
+      document.body.insertAdjacentHTML('beforeend', `<p style="color:red;">此瀏覽器不支援 getUserMedia。</p>`);
     }
   </script>
 </body>

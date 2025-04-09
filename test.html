@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AR.js Test</title>
+    <!-- A-Frame 核心 -->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- AR.js -->
+    <script src="https://cdn.jsdelivr.net/npm/aframe-ar@1.7.2/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin:0; padding:0; overflow:hidden;">
+    <a-scene
+      embedded
+      arjs="debugUIEnabled: true; sourceType: webcam; facingMode: environment;"
+    >
+      <!-- 渲染一個紅色方塊在 Z = -5 的位置 -->
+      <a-box position="0 0 -5" material="color: red;"></a-box>
+      <a-camera></a-camera>
+    </a-scene>
+  </body>
+</html>

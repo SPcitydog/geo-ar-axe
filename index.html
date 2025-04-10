@@ -28,7 +28,7 @@
 
 <body>
   <div id="textOverlay">
-    <strong>Geo AR Demo:</strong> 007_John
+    <strong>Geo AR Demo:</strong> 008_John
   </div>
 
   <a-scene
@@ -51,48 +51,65 @@
       scale="10 10 10"
       rotation="0 0 0"
     ></a-entity>
-    <a-entity
-      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      geometry="primitive: box;"
-      material="color: red;"
-      position="0 5 0"
-      scale="5 5 5"
-    ></a-entity>
-    <a-entity
-      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      geometry="primitive: box;"
-      material="color: blue;"
-      position="0 -5 0"
-      scale="5 5 5"
-    ></a-entity>
-    <a-entity
-      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      geometry="primitive: box;"
-      material="color: yellow;"
-      position="5 0 0"
-      scale="5 5 5"
-    ></a-entity>
-    <a-entity
-      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      geometry="primitive: box;"
-      material="color: purple;"
-      position="-5 0 0"
-      scale="5 5 5"
-    ></a-entity>
-    <a-entity
-      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      geometry="primitive: box;"
-      material="color: black;"
-      position="0 0 5"
-      scale="5 5 5"
-    ></a-entity>
-    <a-entity
-      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
-      geometry="primitive: box;"
-      material="color: orange;"
-      position="0 0 -5"
-      scale="5 5 5"
-    ></a-entity>
+
+    
+   <a-entity gps-entity-place="latitude: 23.130156; longitude: 121.230092;">
+  <!-- 白色球體中心 -->
+  <a-entity
+    geometry="primitive: sphere;"
+    material="color: white;"
+    position="0 0 0"
+    scale="1 1 1"
+  ></a-entity>
+
+  <!-- 上方紅色 -->
+  <a-entity
+    geometry="primitive: box;"
+    material="color: red;"
+    position="0 0.5 0"
+    scale="1 1 1"
+  ></a-entity>
+
+  <!-- 下方藍色 -->
+  <a-entity
+    geometry="primitive: box;"
+    material="color: blue;"
+    position="0 -0.5 0"
+    scale="1 1 1"
+  ></a-entity>
+
+  <!-- 右方黃色 -->
+  <a-entity
+    geometry="primitive: box;"
+    material="color: yellow;"
+    position="0.5 0 0"
+    scale="1 1 1"
+  ></a-entity>
+
+  <!-- 左方紫色 -->
+  <a-entity
+    geometry="primitive: box;"
+    material="color: purple;"
+    position="-0.5 0 0"
+    scale="1 1 1"
+  ></a-entity>
+
+  <!-- 前方黑色（Z 軸負方向）-->
+  <a-entity
+    geometry="primitive: box;"
+    material="color: black;"
+    position="0 0 -0.5"
+    scale="1 1 1"
+  ></a-entity>
+
+  <!-- 後方橘色（Z 軸正方向）-->
+  <a-entity
+    geometry="primitive: box;"
+    material="color: orange;"
+    position="0 0 0.5"
+    scale="1 1 1"
+  ></a-entity>
+</a-entity>
   </a-scene>
 </body>
 </html>

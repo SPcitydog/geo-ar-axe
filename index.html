@@ -28,7 +28,7 @@
 
 <body>
   <div id="textOverlay">
-    <strong>Geo AR Demo:</strong> 006_John
+    <strong>Geo AR Demo:</strong> 007_John
   </div>
 
   <a-scene
@@ -50,8 +50,49 @@
       gltf-model="url(https://spcitydog.github.io/geo-ar-axe/AXE.glb)"
       scale="10 10 10"
       rotation="0 0 0"
-    >
-    </a-entity>
+    ></a-entity>
+    <a-entity
+      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
+      geometry="primitive: box;"
+      material="color: red;"
+      position="0 5 0"
+      scale="5 5 5"
+    ></a-entity>
+    <a-entity
+      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
+      geometry="primitive: box;"
+      material="color: blue;"
+      position="0 -5 0"
+      scale="5 5 5"
+    ></a-entity>
+    <a-entity
+      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
+      geometry="primitive: box;"
+      material="color: yellow;"
+      position="5 0 0"
+      scale="5 5 5"
+    ></a-entity>
+    <a-entity
+      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
+      geometry="primitive: box;"
+      material="color: purple;"
+      position="-5 0 0"
+      scale="5 5 5"
+    ></a-entity>
+    <a-entity
+      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
+      geometry="primitive: box;"
+      material="color: black;"
+      position="0 0 5"
+      scale="5 5 5"
+    ></a-entity>
+    <a-entity
+      gps-entity-place="latitude: 23.130156; longitude: 121.230092;"
+      geometry="primitive: box;"
+      material="color: orange;"
+      position="0 0 -5"
+      scale="5 5 5"
+    ></a-entity>
   </a-scene>
 </body>
 </html>
